@@ -1,0 +1,40 @@
+There are two critical types of table relationships 
+1. physical = relationships are manually created and visible in the data model
+      Properties:
+      ==========
+      *  visible links between tables (1:* cardinality)
+      *  can be active or inactive 
+      *  can be accessed using dax functions (RELATED, RELATEDTABLE, USERELATIONSHIP.
+
+2. virtual = relationships are temporary and defined using DAX Expressions 
+ Properties:
+============
+*	Defined using DAX Expressions 
+*	Used when a physical relationship does not exist or cannot be created directly.
+*	Often used to connect tables with different levels of granularity.
+* can be accessed using DAX functions like TREATAS
+  
+RELATED():
+=========
+Returns a value from a related table in the data model
+		=RELATED(ColName)																							
+ColName = Name of the column you want to retrieve values from (Must reference a table on the "one side" of many-to-one relationship) 
+
+RELATEDTABLE():
+==============
+Returns a related table, Filtered so that only includes the related rows																							
+			RELATEDTABLE(Table)
+Table = Physical table you want to retrieve rows from (Must reference a table on the "many" side of a many to one relationship)																						
+Its generally used with aggregators like countrows, sumx, avaragex
+																							
+USERELATIONSHIP():
+=================
+Specifies an existing relationship to be us																							
+
+
+
+
+
+
+
+																							
