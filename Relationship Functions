@@ -12,7 +12,7 @@ There are two critical types of table relationships
 *	Defined using DAX Expressions 
 *	Used when a physical relationship does not exist or cannot be created directly.
 *	Often used to connect tables with different levels of granularity.
-* can be accessed using DAX functions like TREATAS
+* 	can be accessed using DAX functions like TREATAS
   
 RELATED():
 =========
@@ -29,7 +29,39 @@ Its generally used with aggregators like countrows, sumx, avaragex
 																							
 USERELATIONSHIP():
 =================
-Specifies an existing relationship to be us																							
+Specifies an existing relationship to be used in the evaluation of a DAX expression, defined by naming as arguments, the two columns that serve as an endpoint
+ =USERELATIONSHIP(ColName1,ColName2)
+ColName1 = Foreign or primary key of the relationship
+ColName2 =  primary or Foreign key of the relationship
+Note:
+=====
+the colName1 and colName2 Foreign followed by  primary key or vis versa  
+
+CROSSFILTER():
+=============
+Specifies cross-filtering direction to be used for the duration of the dax expression of the relationship is defined by naming the two columns that serve as endpoints
+	=CROSSFILTER(Leftcolname,Rightcolname,crossfiltertype)
+
+Leftcolname is typically the many side 
+Rightcolname is typically the one side
+crossfiltertype == Oneway, Both, None
+
+TREATAS()
+=========
+Applies the results of a table expression to filter columns on the unrelated table (essentially creating a new, virtual relationship)
+=TREATAS(TableExpression,ColName,[ColName],...)
+
+TableExpression which generates the set of columns to be mapped table expression must be based on the physical table in the data model.
+
+
+
+
+
+
+
+
+
+
 
 
 
