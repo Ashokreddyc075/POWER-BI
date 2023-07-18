@@ -1,18 +1,18 @@
 There are two critical types of table relationships 
 1. physical = relationships are manually created and visible in the data model
-      Properties:
-      ==========
-      *  visible links between tables (1:* cardinality)
-      *  can be active or inactive 
-      *  can be accessed using dax functions (RELATED, RELATEDTABLE, USERELATIONSHIP.
+Properties:
+==========
+visible links between tables (1:* cardinality)
+can be active or inactive 
+can be accessed using dax functions (RELATED, RELATEDTABLE, USERELATIONSHIP.
 
 2. virtual = relationships are temporary and defined using DAX Expressions 
  Properties:
 ============
-*	Defined using DAX Expressions 
-*	Used when a physical relationship does not exist or cannot be created directly.
-*	Often used to connect tables with different levels of granularity.
-* 	can be accessed using DAX functions like TREATAS
+Defined using DAX Expressions 
+Used when a physical relationship does not exist or cannot be created directly.
+Often used to connect tables with different levels of granularity.
+*can be accessed using DAX functions like TREATAS
   
 RELATED():
 =========
