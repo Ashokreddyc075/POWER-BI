@@ -1,0 +1,18 @@
+To evaluate a single scalar value
+SUMX():
+======
+Returns the sum of an expression evaluated for each row in a table 
+=SUMX(TABLE,EXPRESSION)
+
+ Iterator cardinality is the number of rows in the table being iterated. the more unique rows, the higher cardinality (this is different from relationship cardinality)
+ when iterators reference a single table, cardinality is simply the number of unique rows.
+
+when using nested iterations, cardinality depends on whether you are in physical or virtual relationships:
+-> For a physical relationship, cardinality is defined as the max number of unique rows in the largest table
+-> For virtual relationships cardinality is defined as the number of unique rows in each table multiplied together 
+
+CONCATENATEX():
+=============
+Evaluates an expression for each row of the table and return the concatenation of those values in a single string, separated by a delimiter.
+=CONCATENATEX(Table.Expression,[delimiter],[orderby_expression],[order])
+
