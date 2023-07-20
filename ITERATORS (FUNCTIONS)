@@ -16,3 +16,14 @@ CONCATENATEX():
 Evaluates an expression for each row of the table and return the concatenation of those values in a single string, separated by a delimiter.
 =CONCATENATEX(Table.Expression,[delimiter],[orderby_expression],[order])
 
+AVERAGEX()
+==========
+Calculate the average of a set of expressions evaluated over a table
+=AVERAGEX(Table,Expression) 
+EX:
+==
+              Average Daily Sales = 
+              AVERAGEX(
+                  'Calendar',
+                  [Customer Sales]
+              )
